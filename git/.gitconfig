@@ -1,0 +1,8 @@
+[user]
+# Please adapt and uncomment the following lines:
+	name = Diego Martinelli
+	email = (none)
+[alias]
+	s = status
+	f = fetch
+	cm = commit -m
