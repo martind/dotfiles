@@ -25,9 +25,9 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
 # Added by n-install (see http://git.io/n-install-repo).
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
-# Set CLICOLOR if you want Ansi Colors in iTerm2 
+# Set CLICOLOR if you want Ansi Colors in iTerm2
 export CLICOLOR=1
 
 # FZF settings
@@ -35,4 +35,5 @@ export CLICOLOR=1
 export FZF_DEFAULT_OPS="--extended"
 export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--preview 'head -100 {}'"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
