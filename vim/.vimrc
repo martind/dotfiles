@@ -10,11 +10,11 @@ call plug#begin('~/.vim/plugged')
     " Git
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
-    
+
     " FZF
     Plug '/usr/local/opt/fzf'
     Plug 'junegunn/fzf.vim'
-    
+
     " I blame Crockford for this!
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
@@ -35,9 +35,17 @@ set shiftwidth=4
 set softtabstop=4
 
 " Look
+set list
+set listchars=tab:→\ ,space:·
 syntax enable
 set number relativenumber
 set showcmd
 set background=dark
 colorscheme gruvbox
+
+" Misc
+let g:ycm_filetype_whitelist = {
+    \ 'javascript': 1,
+    \ 'javascript.jsx': 1
+\}
 
