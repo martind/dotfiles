@@ -5,13 +5,16 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'vim-airline/vim-airline'
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
+    Plug 'tpope/vim-commentary'
+    Plug 'tpope/vim-sleuth'
     Plug 'morhetz/gruvbox'
 
     " Git
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
 
-    " FZF
+    " Fuzzyness
+    Plug 'mileszs/ack.vim'
     Plug '/usr/local/opt/fzf'
     Plug 'junegunn/fzf.vim'
 
@@ -29,10 +32,15 @@ set nowritebackup
 set mouse=a
 
 " Behaviour
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+let mapleader=","
+
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>a :Ag<CR>
+
+if executable('ag')
+   let g:ackprg = 'ag --vimgrep'
+endif
 
 " Look
 set list
