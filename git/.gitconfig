@@ -1,7 +1,16 @@
 [user]
-	name = Diego Martinelli
-	email = (none)
+    name = Diego Martinelli
+    email = (none)
 [alias]
-	s = status
-	f = fetch
-	cm = commit -m
+    s = status
+    f = fetch
+    cm = commit -m
+    puff = pull --ff-only
+    purr = pull --rebase
+    lol = log --graph --decorate --pretty=oneline --abbrev-commit
+    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+[color]
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
