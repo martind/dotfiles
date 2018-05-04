@@ -37,3 +37,6 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="--preview 'head -100 {}'"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+
+alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+alias c="clear"
