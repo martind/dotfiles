@@ -7,8 +7,8 @@
     cm = commit -m
     puff = pull --ff-only
     purr = pull --rebase
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    lol = log --graph --decorate --pretty=format:'%C(yellow)%h %Cblue[%ar] %Cred%d %Creset%s %Cgreen%an' --abbrev-commit
+    lola = log --graph --decorate --pretty=format:'%C(yellow)%h %Cblue[%ar] %Cred%d %Creset%s %Cgreen%an' --abbrev-commit --all
 [color]
     branch = auto
     diff = auto
