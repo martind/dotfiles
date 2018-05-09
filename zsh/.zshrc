@@ -16,13 +16,14 @@ HIST_STAMPS="dd/mm/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  yarn
 )
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export EDITOR='vim'
+export EDITOR="vim"
 
 # Added by n-install (see http://git.io/n-install-repo).
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
@@ -40,3 +41,8 @@ export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
 alias c="clear"
+alias tmus="tmux"  # I keep doing this typo, so I embrace it
+alias ta="tmux attach -t"
+alias ts="tmux new-session -s"
+alias tl="tmux list-sessions"
+alias tks="tmux kill-session -t"
