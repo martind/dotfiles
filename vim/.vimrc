@@ -32,11 +32,16 @@ set nowritebackup
 set mouse=a
 
 " Behaviour
+set ignorecase
+set smartcase
+set incsearch
+
 let mapleader=","
 
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 
 if executable('ag')
    let g:ackprg = 'ag --vimgrep'
@@ -56,4 +61,8 @@ let g:ycm_filetype_whitelist = {
     \ 'javascript': 1,
     \ 'javascript.jsx': 1
 \}
+
+" Disable YCM's preview window
+set completeopt-=preview
+let g:ycm_add_preview_to_completeopt = 0
 
