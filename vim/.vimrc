@@ -42,6 +42,7 @@ nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>a :Ag<CR>
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
+nnoremap <Leader>t :tabnew<CR>
 
 if executable('ag')
    let g:ackprg = 'ag --vimgrep'
