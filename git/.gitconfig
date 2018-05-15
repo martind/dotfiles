@@ -4,7 +4,10 @@
 [alias]
     s = status
     f = fetch
+    amend = commit --amend
     cm = commit -m
+    d = diff
+    ds = diff --cached
     puff = pull --ff-only
     purr = pull --rebase
     lol = log --graph --decorate --pretty=format:'%C(yellow)%h %Cblue[%ar] %Cred%d %Creset%s %Cgreen%an' --abbrev-commit
