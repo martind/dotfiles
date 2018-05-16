@@ -40,7 +40,7 @@ let mapleader=","
 
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>a :Ag<CR>
+nnoremap <Leader>a :Ag!<CR>
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>t :tabnew<CR>
 
@@ -69,3 +69,13 @@ let g:ycm_filetype_whitelist = {
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
+" Setup Ag with preview
+command! -bang -nargs=* Ag
+         \ call fzf#vim#ag(<q-args>,
+         \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+         \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+         \                 <bang>0)
+
+" Likewise, Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+         \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
