@@ -54,6 +54,7 @@ set listchars=tab:→\ ,space:·
 syntax enable
 set number relativenumber
 set showcmd
+set t_Co=256
 set background=dark
 colorscheme gruvbox
 
