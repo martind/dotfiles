@@ -59,6 +59,7 @@ set background=dark
 colorscheme gruvbox
 
 " Misc
+" Enable YCM just for these files
 let g:ycm_filetype_whitelist = {
     \ 'javascript': 1,
     \ 'javascript.jsx': 1
