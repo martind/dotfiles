@@ -35,6 +35,7 @@ set mouse=a
 set ignorecase
 set smartcase
 set incsearch
+set hlsearch
 
 let mapleader=","
 
@@ -43,6 +44,7 @@ nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>a :Ag!<CR>
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
 nnoremap <Leader>t :tabnew<CR>
+nnoremap <silent> <Leader><space> :nohlsearch<CR>
 
 if executable('ag')
    let g:ackprg = 'ag --vimgrep'
