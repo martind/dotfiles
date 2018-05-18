@@ -43,9 +43,22 @@ let mapleader=","
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
 nnoremap <Leader>a :Ag!<CR>
+
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
+
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <silent> <Leader><space> :nohlsearch<CR>
+
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>z :wq<CR>
+
+nnoremap <Leader>v <C-w>v<CR>
+nnoremap <Leader>s <C-w>s<CR>
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 if executable('ag')
    let g:ackprg = 'ag --vimgrep'
