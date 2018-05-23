@@ -28,6 +28,7 @@ export EDITOR="vim"
 # Added by n-install (see http://git.io/n-install-repo).
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
+export PATH=/usr/local/Cellar/vim/8.1.0001/bin:$PATH
 export PATH=$HOME/bin:$PATH
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2
