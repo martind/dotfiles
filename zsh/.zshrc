@@ -43,6 +43,11 @@ export FZF_CTRL_T_OPTS="--preview 'head -100 {}'"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 
 alias rot13="tr 'A-Za-z' 'N-ZA-Mn-za-m'"
+
+function hex() {
+  echo -n $1 | od -A n -t x1 | tr -d '[:space:]' | sed 's/^/0x/'
+}
+
 alias c="clear"
 alias tmus="tmux"  # I keep doing this typo, so I embrace it
 alias ta="tmux attach -t"
