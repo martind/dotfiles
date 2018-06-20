@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
     " Languages
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
+    Plug 'leafgarland/typescript-vim'
     Plug 'tomlion/vim-solidity'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --cs-completer' } " need to install cmake for YCM
 call plug#end()
@@ -81,6 +82,7 @@ colorscheme gruvbox
 let g:ycm_filetype_whitelist = {
     \ 'javascript': 1,
     \ 'javascript.jsx': 1,
+    \ 'typescript': 1,
     \ 'cs': 1
 \}
 
