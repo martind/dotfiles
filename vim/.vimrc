@@ -8,7 +8,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-sleuth'
     Plug 'morhetz/gruvbox'
-    Plug 'tomlion/vim-solidity'
+    Plug 'tpope/vim-dispatch'
 
     " Git
     Plug 'airblade/vim-gitgutter'
@@ -19,10 +19,11 @@ call plug#begin('~/.vim/plugged')
     Plug '/usr/local/opt/fzf'
     Plug 'junegunn/fzf.vim'
 
-    " I blame Crockford for this!
+    " Languages
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer' } " need to install cmake for YCM
+    Plug 'tomlion/vim-solidity'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --cs-completer' } " need to install cmake for YCM
 call plug#end()
 
 " General
@@ -79,7 +80,8 @@ colorscheme gruvbox
 " Enable YCM just for these files
 let g:ycm_filetype_whitelist = {
     \ 'javascript': 1,
-    \ 'javascript.jsx': 1
+    \ 'javascript.jsx': 1,
+    \ 'cs': 1
 \}
 
 " Disable YCM's preview window
@@ -96,3 +98,4 @@ command! -bang -nargs=* Ag
 " Likewise, Files command with preview window
 command! -bang -nargs=? -complete=dir Files
          \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+
