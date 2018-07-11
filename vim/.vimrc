@@ -42,6 +42,7 @@ set smartcase
 set incsearch
 set hlsearch
 set nowrap
+set clipboard=unnamed
 
 let mapleader=","
 
