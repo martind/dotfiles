@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-sleuth'
     Plug 'morhetz/gruvbox'
     Plug 'tpope/vim-dispatch'
+    Plug 'tpope/vim-unimpaired'
+    Plug 'tpope/vim-repeat'
 
     " Git
     Plug 'airblade/vim-gitgutter'
