@@ -7,10 +7,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-sleuth'
-    Plug 'morhetz/gruvbox'
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat'
+
+    " Colors
+    Plug 'morhetz/gruvbox'
+    Plug 'arcticicestudio/nord-vim'
 
     " Git
     Plug 'airblade/vim-gitgutter'
@@ -26,7 +29,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'mxw/vim-jsx'
     Plug 'leafgarland/typescript-vim'
     Plug 'tomlion/vim-solidity'
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --cs-completer' } " need to install cmake for YCM
+    Plug 'rust-lang/rust.vim'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --rust-completer' } " need to install cmake for YCM
 call plug#end()
 
 " General
@@ -72,13 +76,14 @@ endif
 
 " Look
 set list
-set listchars=tab:→\ ,space:·
+" set listchars=tab:→\ ,space:·
+set listchars=tab:→\
 syntax enable
 set number relativenumber
 set showcmd
 set t_Co=256
 set background=dark
-colorscheme gruvbox
+colorscheme nord
 
 " Misc
 " Enable YCM just for these files
@@ -86,7 +91,7 @@ let g:ycm_filetype_whitelist = {
     \ 'javascript': 1,
     \ 'javascript.jsx': 1,
     \ 'typescript': 1,
-    \ 'cs': 1
+    \ 'rs': 1
 \}
 
 " Disable YCM's preview window

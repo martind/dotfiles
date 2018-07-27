@@ -1,3 +1,6 @@
+# add .zfunc dir to zsh path
+fpath+=~/.zfunc
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/martinellid/.oh-my-zsh
 
