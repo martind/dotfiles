@@ -10,6 +10,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat'
+    Plug 'editorconfig/editorconfig-vim'
 
     " Colors
     Plug 'morhetz/gruvbox'
@@ -27,6 +28,7 @@ call plug#begin('~/.vim/plugged')
     " Languages
     Plug 'pangloss/vim-javascript'
     Plug 'mxw/vim-jsx'
+    Plug 'w0rp/ale'
     Plug 'leafgarland/typescript-vim'
     Plug 'tomlion/vim-solidity'
     Plug 'rust-lang/rust.vim'
@@ -64,6 +66,8 @@ nnoremap <Leader>z :wq<CR>
 
 nnoremap <Leader>v <C-w>v<CR>
 nnoremap <Leader>s <C-w>s<CR>
+
+nnoremap <Leader>e :Ex<CR>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
