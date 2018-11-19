@@ -58,6 +58,7 @@ alias ts="tmux new-session -s"
 alias tl="tmux list-sessions"
 alias tks="tmux kill-session -t"
 alias k="kubectl"
+alias v="vim"
 
 # activate pure prompt
 autoload -U promptinit; promptinit
