@@ -13,8 +13,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'editorconfig/editorconfig-vim'
 
     " Colors
+    Plug 'vim-airline/vim-airline-themes'
     Plug 'morhetz/gruvbox'
     Plug 'arcticicestudio/nord-vim'
+    Plug 'altercation/vim-colors-solarized'
 
     " Git
     Plug 'airblade/vim-gitgutter'
@@ -83,12 +85,13 @@ endif
 set list
 " set listchars=tab:→\ ,space:·
 set listchars=tab:→\
-syntax enable
 set number relativenumber
 set showcmd
-set t_Co=256
-set background=dark
-colorscheme nord
+set background=light
+colorscheme solarized
+let g:airline_solarized_bg='light'
+set t_Co=0
+syntax off
 
 " Misc
 " Enable YCM just for these files
