@@ -6,7 +6,7 @@ export ZSH=/Users/martinellid/.oh-my-zsh
 
 # Set name of the theme to load.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="gallois"
+ZSH_THEME=""
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -58,3 +58,8 @@ alias ts="tmux new-session -s"
 alias tl="tmux list-sessions"
 alias tks="tmux kill-session -t"
 alias k="kubectl"
+
+# activate pure prompt
+autoload -U promptinit; promptinit
+PURE_CMD_MAX_EXEC_TIME=10
+prompt pure
