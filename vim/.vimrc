@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'mhinz/vim-startify'
 
     " Colors
     Plug 'vim-airline/vim-airline-themes'
@@ -34,10 +35,15 @@ call plug#begin('~/.vim/plugged')
     Plug 'leafgarland/typescript-vim'
     Plug 'tomlion/vim-solidity'
     Plug 'rust-lang/rust.vim'
+    Plug 'xolox/vim-misc'
+    Plug 'xolox/vim-lua-ftplugin'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --rust-completer' } " need to install cmake for YCM
+
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " General
+set encoding=UTF-8
 set nocompatible
 set noswapfile
 set nobackup
@@ -90,8 +96,8 @@ set showcmd
 set background=light
 colorscheme solarized
 let g:airline_solarized_bg='light'
-set t_Co=0
-syntax off
+set t_Co=256
+syntax enable
 
 " Misc
 " Enable YCM just for these files
@@ -101,6 +107,11 @@ let g:ycm_filetype_whitelist = {
     \ 'typescript': 1,
     \ 'rs': 1
 \}
+
+" set bookmarks for startify
+let g:startify_bookmarks = [ {'x': '~/.vimrc'}, {'z': '~/.zshrc'} ]
+
+let g:airline_powerline_fonts = 1
 
 " Disable YCM's preview window
 set completeopt-=preview
