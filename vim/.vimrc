@@ -18,6 +18,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'arcticicestudio/nord-vim'
     Plug 'altercation/vim-colors-solarized'
+    Plug 'nanotech/jellybeans.vim'
 
     " Git
     Plug 'airblade/vim-gitgutter'
@@ -38,8 +39,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'xolox/vim-misc'
     Plug 'xolox/vim-lua-ftplugin'
     Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --rust-completer' } " need to install cmake for YCM
-
-    Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " General
@@ -58,26 +57,19 @@ set hlsearch
 set nowrap
 set clipboard=unnamed
 
-let mapleader=","
+let mapleader=";"
 
 nnoremap <Leader>f :Files<CR>
 nnoremap <Leader>b :Buffers<CR>
-nnoremap <Leader>a :Ag!<CR>
 nnoremap <Leader>r :Rg!<CR>
-
 nnoremap <Leader>gt :YcmCompleter GoTo<CR>
-
 nnoremap <Leader>t :tabnew<CR>
 nnoremap <silent> <Leader><space> :nohlsearch<CR>
-
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>z :wq<CR>
-
 nnoremap <Leader>v <C-w>v<CR>
 nnoremap <Leader>s <C-w>s<CR>
-
 nnoremap <Leader>e :Ex<CR>
-
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -89,15 +81,12 @@ endif
 
 " Look
 set list
-" set listchars=tab:→\ ,space:·
 set listchars=tab:→\
 set number relativenumber
 set showcmd
-set background=light
-colorscheme solarized
-let g:airline_solarized_bg='light'
 set t_Co=256
 syntax enable
+colorscheme jellybeans
 
 " Misc
 " Enable YCM just for these files
@@ -111,19 +100,19 @@ let g:ycm_filetype_whitelist = {
 " set bookmarks for startify
 let g:startify_bookmarks = [ {'x': '~/.vimrc'}, {'z': '~/.zshrc'} ]
 
-let g:airline_powerline_fonts = 1
+" let g:airline_section_x=''
+" let g:airline_section_y=''
+" let g:airline_skip_empty_sections=1
+" let g:airline_left_sep=''
+" let g:airline_right_sep=''
+
+set diffopt+=vertical
 
 " Disable YCM's preview window
 set completeopt-=preview
 let g:ycm_add_preview_to_completeopt = 0
 
-" Setup Ag with preview
-command! -bang -nargs=* Ag
-         \ call fzf#vim#ag(<q-args>,
-         \                 <bang>0 ? fzf#vim#with_preview('up:60%')
-         \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
-         \                 <bang>0)
-
+" setup Rg command
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
