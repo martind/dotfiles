@@ -97,7 +97,11 @@ let g:ycm_filetype_whitelist = {
     \ 'rs': 1
 \}
 
-" set bookmarks for startify
+let g:startify_lists = [
+  \ { 'type': 'dir', 'header': ['    MRU'] },
+  \ { 'type': 'bookmarks', 'header': [    'Bookmarks'] },
+  \ ]
+
 let g:startify_bookmarks = [ {'x': '~/.vimrc'}, {'z': '~/.zshrc'} ]
 
 " let g:airline_section_x=''
