@@ -100,15 +100,9 @@ let g:ycm_filetype_whitelist = {
 let g:startify_lists = [
   \ { 'type': 'dir', 'header': ['    MRU'] },
   \ { 'type': 'bookmarks', 'header': [    'Bookmarks'] },
-  \ ]
+\ ]
 
 let g:startify_bookmarks = [ {'x': '~/.vimrc'}, {'z': '~/.zshrc'} ]
-
-" let g:airline_section_x=''
-" let g:airline_section_y=''
-" let g:airline_skip_empty_sections=1
-" let g:airline_left_sep=''
-" let g:airline_right_sep=''
 
 set diffopt+=vertical
 
