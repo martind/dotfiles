@@ -37,6 +37,15 @@ export PATH=$HOME/bin:$PATH
 # Set CLICOLOR if you want Ansi Colors in iTerm2
 export CLICOLOR=1
 
+# Use vim editing mode in terminal [escape to enter normal mode]
+bindkey -v
+
+# Restore some keymaps removed by vim keybind mode
+#bindkey '^P' up-history
+#bindkey '^N' down-history
+bindkey '^P' up-line-or-search
+bindkey '^N' down-line-or-search
+
 # FZF settings
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPS="--extended"
