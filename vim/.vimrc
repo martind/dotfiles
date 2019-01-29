@@ -7,8 +7,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'jeffkreeftmeijer/vim-numbertoggle'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-sleuth'
-    Plug 'tpope/vim-dispatch'
-    Plug 'tpope/vim-unimpaired'
     Plug 'tpope/vim-repeat'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'mhinz/vim-startify'
@@ -19,6 +17,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'arcticicestudio/nord-vim'
     Plug 'altercation/vim-colors-solarized'
     Plug 'nanotech/jellybeans.vim'
+    Plug 'rafi/awesome-vim-colorschemes'
 
     " Git
     Plug 'airblade/vim-gitgutter'
@@ -81,12 +80,13 @@ endif
 
 " Look
 set list
-set listchars=tab:→\
+set listchars=tab:>\ ,trail:·,extends:>,precedes:<,nbsp:+
 set number relativenumber
 set showcmd
 set t_Co=256
 syntax enable
-colorscheme jellybeans
+set background=light
+colorscheme PaperColor
 
 " Misc
 " Enable YCM just for these files
