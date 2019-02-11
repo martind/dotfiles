@@ -49,6 +49,12 @@ set nowritebackup
 set mouse=a
 
 " Behaviour
+syntax on
+filetype plugin indent on
+set autoindent
+set expandtab
+set tabstop=4
+set shiftwidth=4
 set ignorecase
 set smartcase
 set incsearch
@@ -56,6 +62,7 @@ set hlsearch
 set nowrap
 set clipboard=unnamed
 
+" Mappings
 let mapleader=";"
 
 nnoremap <Leader>f :Files<CR>
@@ -84,7 +91,6 @@ set listchars=tab:>\ ,trail:·,extends:>,precedes:<,nbsp:+
 set number relativenumber
 set showcmd
 set t_Co=256
-syntax enable
 set background=light
 colorscheme PaperColor
 
