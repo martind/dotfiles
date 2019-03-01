@@ -73,6 +73,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap <silent> <leader>y "*y
+nnoremap <silent> <leader>Y "*Y
+nnoremap <silent> <leader>p "*p
+nnoremap <silent> <leader>P "*P
 
 let g:startify_lists = [
   \ { 'type': 'dir', 'header': ['    MRU'] },
