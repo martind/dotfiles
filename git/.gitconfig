@@ -6,6 +6,7 @@
     f = fetch
     amend = commit --amend
     cm = commit -m
+    co = checkout
     d = diff
     ds = diff --cached
     puff = pull --ff-only
@@ -19,3 +20,10 @@
     status = auto
 [pull]
     rebase = true
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = 0
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
