@@ -49,6 +49,7 @@ set list
 set listchars=tab:>\ ,trail:·,extends:>,precedes:<,nbsp:+
 set showcmd
 set t_Co=256
+set termguicolors
 set background=light
 colorscheme PaperColor
 syntax on
@@ -97,3 +98,6 @@ command! -bang -nargs=* Rg
 command! -bang -nargs=? -complete=dir Files
          \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
 
+if !has('nvim')
+    set ttymouse=xterm2
+endif
