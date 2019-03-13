@@ -69,8 +69,8 @@ alias tks="tmux kill-session -t"
 alias k="kubectl"
 alias v="vim"
 alias vi="vim"
-alias dkps="docker ps"
-alias dkgc='docker rm $(docker ps -qa --filter "status=exited") && docker rmi $(docker images --filter "dangling=true" -q)'
+alias dk="docker"
+alias yw='yarn watch'
 
 # activate pure prompt
 autoload -U promptinit; promptinit
