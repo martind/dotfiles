@@ -26,7 +26,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'rust-lang/rust.vim'
     Plug 'xolox/vim-misc'
     Plug 'xolox/vim-lua-ftplugin'
-    " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --js-completer --rust-completer' } " need to install cmake for YCM
+    Plug 'ludovicchabant/vim-gutentags'
+    Plug 'majutsushi/tagbar'
 call plug#end()
 
 set encoding=UTF-8
@@ -78,6 +79,7 @@ nnoremap <silent> <leader>y "*y
 nnoremap <silent> <leader>Y "*Y
 nnoremap <silent> <leader>p "*p
 nnoremap <silent> <leader>P "*P
+nmap <F8> :TagbarToggle<CR>
 
 let g:startify_lists = [
   \ { 'type': 'dir', 'header': ['    MRU'] },
@@ -85,6 +87,8 @@ let g:startify_lists = [
 \ ]
 
 let g:startify_bookmarks = [ {'x': '~/.vimrc'}, {'z': '~/.zshrc'} ]
+
+let g:gutentags_file_list_command = 'git ls-files'
 
 " setup Rg command with preview
 command! -bang -nargs=* Rg
